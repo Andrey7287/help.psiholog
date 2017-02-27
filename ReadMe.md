@@ -4,3 +4,5 @@ require.ensure([], (require) => {
 	$('.ttt').ravno();
 
 });
+
+set NODE_ENV=production

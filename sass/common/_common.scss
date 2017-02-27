@@ -27,7 +27,10 @@ p {
 		//margin: 0;
 	}
 }
-
+.wide-block {
+	max-width: 1366px;
+	margin: 0 auto;
+}
 
 //Nav
 
@@ -54,6 +57,7 @@ textarea {
 a {
 	color: $link;
 	transition: 0.3s;
+
 	text-decoration: none;
 	display: inline-block;
 	&:hover,
@@ -80,7 +84,7 @@ img {
 body button:not(.scrollup):not(.slider-arrow) {
 	background: rgb(247,63,89);
 	background: linear-gradient(to bottom, rgba(247,63,89,1) 0%,rgba(222,55,78,1) 49%,rgba(218,54,77,1) 50%,rgba(200,48,69,1) 100%);
-	color: $white;
+	color: #fff;
 	@include font(30,30, 700);
 	text-transform: uppercase;
 	padding: 20px 30px;
@@ -96,9 +100,8 @@ body button:not(.scrollup):not(.slider-arrow) {
 // Headers
 
 h1, .h1 {
-	@include font(30, 32, 400);
+	@include font(50, 54, 700, $font: $pt-serif);
 	color: $header;
-	text-transform: uppercase;
 	margin: 18px 0;
 }
 h2, .h2 {

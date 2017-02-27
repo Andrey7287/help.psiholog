@@ -1,20 +1,19 @@
  /* Fonts */
 $open-sans: 'Open Sans', sans-serif;
+$pt-serif: 'PT Serif', serif;
 
 $default-font: $open-sans;
 $base-font-size: 15;
 $base-line-height: 26;
-$default-color: #545454;
-$black: #333;
+$default-color: #333;
 
-$link: #01a3d4;
-$link-hov: #01a3d4;
+$link: #5a8e07;
+$link-hov: #5a8e07;
 
-$header: #40484b;
+$header: #3c332a;
 
 /* Colors */
 $grey: #777;
-$soft-grey: #999;
-$bkg-grey: #e1e1e1;
-$bkg-footer: #e9f6fa;
+$bkg-header: rgba(255,255,255,.66);
+$bkg-footer: #e2c897;
 
