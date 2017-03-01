@@ -1,0 +1,19 @@
+.advantages {
+	@include layout(table);
+	&__item {
+		text-align: center;
+		width: 20%;
+		vertical-align: top;
+		img {
+			display: inline;
+		}
+		.title {
+			@include font(20,22,700);
+			color: $deep-blue;
+			margin: 10px 0;
+		}
+		.txt {
+			color: $grey;
+		}
+	}
+}

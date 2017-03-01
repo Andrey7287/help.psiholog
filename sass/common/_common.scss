@@ -15,17 +15,18 @@
 
 body {
 	font-size: #{$base-font-size}px;
+	line-height: #{$base-line-height}px;
 	color: $default-color;
 }
 p {
 	@include font;
-	//text-align: justify;
-	@include breakpoint(mobile){
-		//@include font(13, 22);
-	}
 	&:first-of-type {
 		//margin: 0;
 	}
+}
+
+.block {
+	padding: 45px 0;
 }
 .wide-block {
 	max-width: 1366px;
@@ -82,18 +83,17 @@ img {
 //Buttons
 
 body button:not(.scrollup):not(.slider-arrow) {
-	background: rgb(247,63,89);
-	background: linear-gradient(to bottom, rgba(247,63,89,1) 0%,rgba(222,55,78,1) 49%,rgba(218,54,77,1) 50%,rgba(200,48,69,1) 100%);
+	background: #74a109;
+	background: linear-gradient(to bottom, #a7c90f 0%, #99bd0d 4%, #74a109 50%, #558a07 100%);
 	color: #fff;
-	@include font(30,30, 700);
+	@include font(22,22,700, $font: $pt-serif);
 	text-transform: uppercase;
-	padding: 20px 30px;
-	border-radius: 5px;
-	border: 0;
-	box-shadow: 0 1px 0 0 #ff4e67, 0 3px 0 0 #8e094b;
+	padding: 13px 55px;
+	border-radius: 4px;
+	border: 1px solid #7ca60a;
 	&:hover {
-		background: linear-gradient(to top, rgba(247,63,89,1) 0%,rgba(222,55,78,1) 49%,rgba(218,54,77,1) 50%,rgba(200,48,69,1) 100%);
-		box-shadow: 0 1px 0 0 #ff7689, 0 3px 0 0 rgba(247,63,89,1);
+		border: 1px solid #577407;
+		background: linear-gradient(to top, #a7c90f 0%, #99bd0d 4%, #74a109 50%, #558a07 100%);
 	}
 }
 
@@ -103,35 +103,62 @@ h1, .h1 {
 	@include font(50, 54, 700, $font: $pt-serif);
 	color: $header;
 	margin: 18px 0;
+	text-align: center;
 }
 h2, .h2 {
-	@include font(30, 32, 700);
+	@include font(30, 32, 700, $font: $pt-serif);
 	color: $header;
 	margin: 15px 0;
 }
 h3, .h3 {
-	@include font(20, 24, 700);
+	@include font(20, 24, 700, $font: $pt-serif);
 	color: $header;
 	margin: 10px 0;
 }
-
-$btn-bkg: #01a3d4;
-.btn {
-	width: 100%;
-	background: $btn-bkg;
-	color: #fff;
+.sub-h {
+	@include font(15, 28);
+	color: $grey;
 	text-align: center;
-	padding: 10px;
-	border-radius: 4px;
-	margin: 25px 0;
-	text-transform: uppercase;
-	@include font(20, 30);
-	text-decoration: none;
-	&:hover {
-		background: lighten($btn-bkg, 5%);
-		color: #fff;
+}
+.body hr,
+.hr {
+	display: block;
+	background: $green;
+	width: 7px;
+	height: 7px;
+	border: 0;
+	border-radius: 50%;
+	position: relative;
+	margin: 20px auto;
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		width: 125px;
+		height: 1px;
+		background: #d7dcd5;
+		position: absolute;
+		top: 50%;
+		left: -137px;
+	}
+	&::after {
+		left: 19px;
+	}
+	&--white {
+		&::before,
+		&::after {
+			background: #fff!important;
+		}
+	}
+	&--half {
+		display: inline-block!important;
+		margin: 25px 0 0!important;
+		&::before {
+			display: none!important;
+		}
 	}
 }
+
 .breadcrumbs {
 	color: #999;
 	margin-bottom: 30px;
@@ -147,10 +174,6 @@ $btn-bkg: #01a3d4;
 		@include link(#999);
 		border-color: #d6d6d6;
 	}
-}
-
-.inner {
-	margin-bottom: 20px;
 }
 
 .inner ul {

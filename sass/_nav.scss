@@ -1,0 +1,22 @@
+.site-nav {
+	text-align: right;
+	&__item {
+		display: inline-block;
+		padding-left: 50px;
+		&:first-child {
+			padding-left: 0;
+		}
+		a {
+			line-height: 2;
+			color: #3c332a;
+			&:hover {
+				color: $green;
+			}
+		}
+		&--act {
+			a {
+				color: $green;
+			}
+		}
+	}
+}

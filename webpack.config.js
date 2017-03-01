@@ -27,12 +27,37 @@ module.exports = {
 
 	devtool: NODE_ENV == 'development' ? "eval" : "source-map",
 
+	module: {
+
+		loaders: [
+			{
+				test: /\.jsx?$/,
+				exclude: /(node_modules)/,
+				loader: 'babel-loader',
+				query: {
+					presets: ['es2015', 'react'],
+					plugins: ['transform-runtime']
+				}
+			},{
+				test: /\.scss$/,
+				loader: NODE_ENV == 'development' ?
+				'style!css!sass' :
+				ExtractTextPlugin.extract('style', 'css?sourceMap!resolve-url?sourceMap!sass?sourceMap')
+			},
+			{
+				test: /\.(gif|jpg|png|jpeg\ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+				loader: "file-loader?name=[name].[ext]&publicPath=images/&outputPath=assets/"
+			}
+		]
+	},
+
 	plugins: [
 		new webpack.DefinePlugin({
 			NODE_ENV: JSON.stringify(NODE_ENV)
 		}),
 		new webpack.ProvidePlugin({
-			$: 'jquery/dist/jquery.min'
+			$: 'jquery/dist/jquery.min',
+			jQuery: 'jquery/dist/jquery.min'
 		}),
 		new SpritesmithPlugin({
 			src: {
@@ -51,34 +76,6 @@ module.exports = {
 			allChunks: true
 		})
 	],
-
-	module: {
-
-		loaders: [
-			{
-				test: /\.jsx?$/,
-				exclude: /(node_modules)/,
-				loader: 'babel-loader',
-				query: {
-					presets: ['es2015', 'react'],
-					plugins: ['transform-runtime']
-				}
-			},
-			{
-				test: /\.png$/,
-				loader:'file-loader?name=[name].[ext]&publicPath=images/&outputPath=./images/'
-			},{
-				test: /\.scss$/,
-				loader: NODE_ENV == 'development' ?
-				'style-loader!css-loader!sass-loader' :
-				ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!resolve-url-loader?sourceMap!sass-loader?sourceMap')
-			},
-			{
-				test: /\.(gif|png|jpg|jpeg\ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-				loader: "file-loader?name=[name].[ext]&publicPath=images/&outputPath=./images/"
-			}
-		]
-	},
 
 	resolve: {
 		modulesDirectories: ["web_modules", "node_modules", "spritesmith-generated"]

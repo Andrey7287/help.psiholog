@@ -1,0 +1,82 @@
+.discount {
+	@include layout(table);
+	margin: 30px auto;
+	&__item {
+		color: $green;
+		width: 50%;
+		&:first-child {
+			padding: 0 10px 0 125px;
+		}
+		&:last-child {
+			padding: 0 50px 0 10px;
+		}
+	}
+	&__vol {
+		display: table-cell;
+		@include font(100,80,700);
+		vertical-align: bottom;
+	}
+	&__txt {
+		display: table-cell;
+		@include font(24,24,700);
+		text-transform: uppercase;
+		vertical-align: bottom;
+		padding-left: 10px;
+	}
+}
+
+.price {
+	&:nth-child(odd){
+		.price__inner {
+			background: #faf3e1;
+		}
+	}
+	&:nth-child(even){
+		.price__inner {
+			background: #edefec;
+			.price__desc {
+				border-color: #a5b1b5;
+			}
+		}
+	}
+	&__inner {
+		text-align: center;
+		padding: 20px;
+	}
+	&__subj {
+		@include font(24,30,700);
+		text-transform: uppercase;
+		color: $deep-blue;
+	}
+	&__vol {
+		display: inline-block;
+		width: 130px;
+		height: 130px;
+		background: #fff;
+		border-radius: 50%;
+		@include font(42,110,700);
+		color: $deep-blue;
+		position: relative;
+		margin: 10px 0;
+		&::after {
+			content: "рублей";
+			display: block;
+			@include font(24,26,400,42);
+			position: absolute;
+			top: 72px;
+			left: 25px;
+		}
+	}
+	&__desc {
+		line-height: 1.2em;
+		padding: 11px 0;
+		color: $grey;
+		border-bottom: 1px solid #e2c897;
+		&:first-child {
+			border-top: 1px solid #e2c897;
+		}
+	}
+	&__button {
+		margin: 35px 0 15px;
+	}
+}

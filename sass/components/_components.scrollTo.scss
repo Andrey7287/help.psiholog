@@ -1,4 +1,4 @@
-$scroll-up-color: #A8B7BE;
+$scroll-up-color: $green;
 .scrollup {
 	position: fixed;
 	text-indent: -9999px;
@@ -20,7 +20,7 @@ $scroll-up-color: #A8B7BE;
 		top: 50%;
 		left: 50%;
 		margin-left: -10px;
-		margin-top: -18px;
+		margin-top: -14px;
 		width: 16px;
 		height: 22px;
 		color: $scroll-up-color;
@@ -30,6 +30,7 @@ $scroll-up-color: #A8B7BE;
 	&.act {
 		right: 20px;
 		opacity: .7;
+		background: #fff;
 		&:hover {
 			background: $scroll-up-color;
 			opacity: 1;

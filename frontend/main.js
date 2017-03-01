@@ -21,13 +21,13 @@ var	isMap = $('#map').is('#map'),
 ********* MAP *********
 ***********************/
 
-/*if ( isMap ) {
+if ( isMap ) {
 
 	require.ensure([], (require) => {
-		require('./modules/map');
+		require('./modules/ymap');
 	});
 
-}*/
+}
 
 /***********************
 ******** SLIDER ********
@@ -70,3 +70,18 @@ $(document).scroll(function(){
 
 $('.scrollup').scrollUp();
 
+/************************
+********* Ravno *********
+*************************/
+
+require('./modules/ravno');
+
+setTimeout(function(){
+	var cases = document.querySelectorAll('.case');
+
+	Array.prototype.forEach.call(cases, function(i){
+		console.log(i.clientHeight);
+	});
+}, 1000);
+
+//$('.feedback__block').ravno();

@@ -1,0 +1,40 @@
+.wide-block {
+	background: url(../images/bkg-top.jpg) 0 0 no-repeat;
+	background-position: center;
+	&.about {
+		background: url(../images/bkg-about.jpg) 0 0 no-repeat;
+	}
+}
+
+.presentation {
+	padding: 110px 0 137px;
+	&__title {
+		@include font(48,48,700, $font: $pt-serif);
+		color: $deep-blue;
+	}
+	&__sub-title {
+		@include font(24,30,300);
+		color: #3c332a;
+		margin: 12px 0 88px;
+	}
+	&__txt {
+		@include font(18,22);
+		color: #e2c897;
+	}
+	&__phone {
+		@include font(30,32,700);
+		color: #fff;
+		margin: 7px 0 17px;
+	}
+}
+.about {
+	&__txt {
+		padding: 32px 0 382px 360px;
+	}
+	&__name {
+		display: none;
+	}
+	&__occupation {
+		display: none;
+	}
+}
