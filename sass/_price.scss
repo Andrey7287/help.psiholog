@@ -1,27 +1,52 @@
 .discount {
 	@include layout(table);
+	@include breakpoint(tablet){
+		@include layout(block);
+		font-size: 0.9em;
+	}
+	@include breakpoint(mobile){
+		font-size: 0.65em;
+	}
 	margin: 30px auto;
 	&__item {
 		color: $green;
 		width: 50%;
+		@include breakpoint(tablet){
+			width: auto;
+			margin-bottom: 20px;
+		}
 		&:first-child {
 			padding: 0 10px 0 125px;
+			@include breakpoint(tablet) {
+				padding: 0;
+			}
 		}
 		&:last-child {
 			padding: 0 50px 0 10px;
+			@include breakpoint(tablet) {
+				padding: 0;
+			}
+		}
+	}
+	&__vol,
+	&__txt {
+		vertical-align: bottom;
+		@include breakpoint(tablet){
+			vertical-align: middle;
 		}
 	}
 	&__vol {
 		display: table-cell;
 		@include font(100,80,700);
-		vertical-align: bottom;
 	}
 	&__txt {
 		display: table-cell;
 		@include font(24,24,700);
 		text-transform: uppercase;
-		vertical-align: bottom;
 		padding-left: 10px;
+		@include breakpoint(mobile) {
+			line-height: 1.1em;
+		}
 	}
 }
 
@@ -42,6 +67,9 @@
 	&__inner {
 		text-align: center;
 		padding: 20px;
+		@include breakpoint(tablet) {
+			margin-bottom: 15px;
+		}
 	}
 	&__subj {
 		@include font(24,30,700);

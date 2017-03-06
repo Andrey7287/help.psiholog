@@ -1,13 +1,27 @@
 .wide-block {
 	background: url(../images/bkg-top.jpg) 0 0 no-repeat;
 	background-position: center;
+	@include breakpoint(mobile){
+		background: #d7dcd5;
+	}
 	&.about {
 		background: url(../images/bkg-about.jpg) 0 0 no-repeat;
+		@include breakpoint(middle) {
+			background: #d7dcd5;
+		}
 	}
 }
 
 .presentation {
 	padding: 110px 0 137px;
+	@include breakpoint(tablet) {
+		text-align: right;
+		padding: 130px 0 37px;
+	}
+	@include breakpoint(mobile) {
+		text-align: center;
+		padding: 100px 0 30px;
+	}
 	&__title {
 		@include font(48,48,700, $font: $pt-serif);
 		color: $deep-blue;
@@ -16,6 +30,12 @@
 		@include font(24,30,300);
 		color: #3c332a;
 		margin: 12px 0 88px;
+		@include breakpoint(tablet) {
+			margin: 12px 0 168px;
+		}
+		@include breakpoint(mobile) {
+			margin: 20px 0;
+		}
 	}
 	&__txt {
 		@include font(18,22);
@@ -28,13 +48,44 @@
 	}
 }
 .about {
+	@include breakpoint(middle) {
+		padding: 20px 0;
+	}
 	&__txt {
-		padding: 32px 0 382px 360px;
+		padding: 32px 0 382px 382px;
+		@include breakpoint(middle){
+			padding: 0;
+		}
 	}
-	&__name {
-		display: none;
+	.about-inner {
+		@include breakpoint(mobile) {
+			font-size: 0.8em;
+		}
 	}
+	&__name,
 	&__occupation {
 		display: none;
+		@include breakpoint(middle){
+			display: inline-block;
+		}
+		padding: 10px 20px;
+		color: #fff;
+		margin-bottom: 15px;
+	}
+	&__name {
+		@include font(42,50,700, $font: $pt-serif);
+		background: #7ca60a;
+		box-shadow: 5px 5px 0 0 #a5b1b5;
+		span {
+			text-transform: uppercase;
+		}
+	}
+	&__occupation {
+		@include font(28,36);
+		background: #738084;
+		box-shadow: 5px 5px 0 0 #fff;
+		span {
+			font-weight: 700;
+		}
 	}
 }

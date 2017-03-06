@@ -5,17 +5,39 @@
 	.infodisign {
 		color: #faf3e1;
 		@include font(16,44);
+		@include breakpoint(tablet) {
+			@include font(15,15);
+		}
 	}
 	.infodisign {
 		float: right;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		@include breakpoint(tablet) {
+			float: none;
+			transform: translateY(-17px);
+		}
+		@include breakpoint(mobile){
+			transform: translateY(0);
+		}
 	}
 	.soc {
 		text-align: center;
+		@include breakpoint(mobile) {
+			text-align: left;
+			margin: 10px 0;
+		}
 		.soc-inner {
 			display: inline-block;
 			background: #fff;
 			padding: 3px;
 			border: 1px solid #e8d2a8;
+			transition: 0.2s;
+			&:hover {
+				background: #e8d2a8;
+			}
 		}
 		&__item {
 			text-indent: -9999px;
@@ -28,7 +50,7 @@
 			&--ok {
 				@include sprite($soc_ok);
 			}
-			transition: transform 0.3 ease-out;
+			transition: transform 0.3s ease-out;
 			&:hover {
 				transform: translateY(-2px);
 			}

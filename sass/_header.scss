@@ -6,14 +6,54 @@ header {
 	z-index: 1000;
 	padding-top: 8px;
 	background: linear-gradient(to bottom, rgba(255,255,255,.66) 0%, rgba(255,255,255,1) 100%);
+	&.scroll {
+		padding: 4px 0;
+		border-bottom: 1px solid #ccc;
+		background: #fff;
+		box-shadow: 0 0 2px 0 #ccc;
+	}
 }
 .header {
 	@include layout(table);
+	@include breakpoint(tablet){
+		@include layout(block)
+	}
+	.logo-wrapp {
+		display: block;
+		text-decoration: none;
+	}
 	.logo {
 		@include layout(table);
+		transition: all 0.3s;
+		.scroll & {
+			font-size: 0.8em;
+		}
 		&__item {
+			position: relative;
+			@include breakpoint(mobile){
+				font-size: 0.7em;
+			}
+			div{
+				white-space: nowrap;
+				@include breakpoint(tablet) {
+					display: table-cell;
+					padding: 0 10px;
+					.scroll & {
+						padding: 0 20px 0 0;
+					}
+				}
+				@include breakpoint(mobile) {
+					display: block;
+					padding: 0;
+				}
+			}
 			&:first-child {
 				width: 80px;
+				@at-root {
+					.scroll & {
+						display: none;
+					}
+				}
 			}
 			div {
 				@include font(16,20);

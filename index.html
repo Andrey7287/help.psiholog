@@ -15,11 +15,13 @@
 	<div class="body">
 		<div class="content">
 			<header>
-
 					<div class="container">
 						<div class="header">
 								<div class="header__item">
-									<a href="/">
+									<button class="c-hamburger c-hamburger--htx">
+										<span>toggle menu</span>
+									</button>
+									<a href="/" class="logo-wrapp">
 										<div class="logo">
 											<div class="logo__item">
 												<img src="images/logo.png" alt="Логотип. Ефименко Юлия (психологическая помощь)" title="Логотип. Ефименко Юлия (психологическая помощь)">
@@ -33,14 +35,10 @@
 								</div>
 								<div class="header__item">
 									<nav id="siteMenu">
-
-										<button class="c-hamburger c-hamburger--htx">
-											<span>toggle menu</span>
-										</button>
 										<ul class="site-nav mobile-close hide">
 											<li class="site-nav__item site-nav__item--act"><a href="/" class="site-nav__link"><span>Главная</span></a></li>
-											<li class="site-nav__item"><a href="#tech" class="site-nav__link"><span>Обо&nbsp;мне</span></a></li>
-											<li class="site-nav__item"><a href="#iss" class="site-nav__link"><span>Консультации</span></a></li>
+											<li class="site-nav__item"><a href="#about" class="site-nav__link"><span>Обо&nbsp;мне</span></a></li>
+											<li class="site-nav__item"><a href="#consultation" class="site-nav__link"><span>Консультации</span></a></li>
 											<li class="site-nav__item"><a href="" class="site-nav__link"><span>Статьи</span></a></li>
 											<li class="site-nav__item"><a href="" class="site-nav__link"><span>Отзывы</span></a></li>
 											<li class="site-nav__item"><a href="" class="site-nav__link"><span>Контакты</span></a></li>
@@ -78,42 +76,42 @@
 					<div class="sub-h">Если вы решили обратиться к психологу, значит, вы чувствуете потребность и готовность что-то поменять в своей жизни.</div>
 					<hr />
 					<div class="row">
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_01.jpg" alt=""></div>
 								<div class="case__title">Депрессия</div>
 								<div class="case__txt">Снижение настроения, неспособность переживать радость, негативное мышление, двигательная заторможенность.</div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_02.jpg" alt=""></div>
 								<div class="case__title">Страхи, фобии</div>
 								<div class="case__txt">Неконтролируемый, навязчивый страх, связанный с определенной ситуацией или объектом.</div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_03.jpg" alt=""></div>
 								<div class="case__title">Неуверенность в себе</div>
 								<div class="case__txt">Отсутствие попыток добиться цели, желание приукрасить реальность, низкая самооценка, желание быть похожим на других. </div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_04.jpg" alt=""></div>
 								<div class="case__title">Одиночество</div>
 								<div class="case__txt">Отсутствие рядом близкого человека. Но иногда и живя с кем-то можно чувствовать себя одиноким</div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_05.jpg" alt=""></div>
 								<div class="case__title">Эмоциональная зависимость</div>
 								<div class="case__txt">Патологическая, эмоциональная поглощенность от отношений с зависимым человеком</div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_06.jpg" alt=""></div>
 								<div class="case__title">Кризис в отношениях</div>
 								<div class="case__txt">На пути своего существования каждая семья претерпевает кризисы и конфликты, вызванные неудовлетворенностью супругов.</div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_07.jpg" alt=""></div>
 								<div class="case__title">Развод</div>
 								<div class="case__txt">Болезненные переживания разрыва отношений, стресс и депрессия — возможно преодолеть с помощью психолога.</div>
 							</a></div>
-						<div class="col-md-3"><a href="" class="case">
+						<div class="col-md-3 col-sm-4"><a href="" class="case">
 								<div class="case__img"><img src="images/case_08.jpg" alt=""></div>
 								<div class="case__title">Потеря близкого человека</div>
 								<div class="case__txt">Когда умирает любимый и близкий человек, возникает чувство, что будто потерял часть себя.</div>
@@ -122,16 +120,21 @@
 				</div>
 			</div>
 
-			<div class="wide-block about">
+			<div class="wide-block about" id="about">
 				<div class="container">
 					<div class="about__txt">
 						<p>Конфликты в семье, разводы, потеря близких и любимых людей, чувство одиночества, депрессия, страхи, фобии, потеря смысла жизни, неуверенность в себе – и это далеко не весь перечень проблем, которые мешают дышать полной грудью и ощущать себя счастливым человеком.</p>
 						<p>Благодаря специально построенной беседе, с использованием различных техник, применяемых в консультировании, а также знаниям об устройстве психики и психологической природы человека, я помогаю клиенту понять суть проблемы и найти способ ее решения.</p>
 						<p>Для меня каждый клиент - это индивидуальность, со своими эмоциями, чувствами, красотой и богатством внутреннего мира. Помогая людям решать проблемы, предлагая свой профессиональный и жизненный опыт, я искренне радуюсь их изменениям к лучшему, а счастливые лица клиентов – это самая большая награда и подтверждение моего профессионализма.</p>
 					</div>
-					<div class="about__name">Ефименко<br />Юлия Анатольевна</div>
-					<div class="about__occupation">Психолог,
-						соискатель ученой степени <br />Кандидата Психологических Наук</div>
+					<div class="about-inner">
+						<div class="about__name">
+							<span>Ефименко</span><br />Юлия Анатольевна
+						</div>
+						<div class="about__occupation">
+							<span>Психолог,</span><br />соискатель ученой степени<br />Кандидата Психологических Наук
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -189,7 +192,6 @@
 																Мы с мужем были на грани развода. Благодаря Юлии мы разобрались в своих отношениях и заново полюбили друг друга.
 										</div>
 									</div>
-									<div class="feedback__border"></div>
 								</div>
 							</div>
 							<div class="col-md-4">
@@ -202,7 +204,6 @@
 						С пожеланиями успехов!
 										</div>
 									</div>
-									<div class="feedback__border"></div>
 								</div>
 							</div>
 							<div class="col-md-4">
@@ -213,7 +214,6 @@
 										<div class="feedback__txt">Дорогая Юлия Анатольевна. Бесконечно Вам благодарна за все, что Вы сделали для меня! Ваши глаза горят, Вы любите дело, которым занимаетесь. Моя жизнь вновь обрела смысл, вернулись радость и любовь. Вы заразили меня своей любовью к жизни и оптимизмом. Спасибо Вам большое за то, что Вы есть.
 										</div>
 									</div>
-									<div class="feedback__border"></div>
 								</div>
 							</div>
 						</div>
@@ -225,7 +225,7 @@
 			</div>
 
 			<div class="block">
-				<div class="container">
+				<div class="container" id="consultation">
 					<div class="h1">Виды консультаций и стоимость</div>
 					<div class="sub-h">Вы можете выбрать удобный для Вас формат работы в психологическом центре или по скайпу </div>
 					<hr />
@@ -279,28 +279,28 @@
 					</div>
 				</div>
 			</div>
-			<div class="map-outer">
-				<div class="map" id="map"></div>
-					<div class="contacts-wrapp">
-						<div class="contacts">
-							<div class="contacts__title">Контакты</div>
-							<hr class="hr hr--half">
-							<div class="contacts__sub-title">Адреса кабинетов:</div>
-							<div>м. Третьяковская, м. Новокузнецкая</div>
-							<div>ул. Большая Ордынка, д. 17/8 (<a href="https://yandex.ru/maps/213/moscow/?z=18&ll=37.626867%2C55.741617&l=map&rtext=55.742496%2C37.629034~55.740774%2C37.625580~55.742231%2C37.626018&rtt=pd&pt=37.626018%2C55.742231~37.625693%2C55.741599&origin=jsapi_2_1_48&from=api-maps&mode=routes">на карте</a>)</div>
-							<div>ул. Большая Ордынка, д. 19/1 (<a href="https://yandex.ru/maps/213/moscow/?z=18&ll=37.627457%2C55.741484&l=map&rtext=55.742496%2C37.629034~55.740774%2C37.625580~55.741599%2C37.625693&rtt=pd&pt=37.626018%2C55.742231~37.625693%2C55.741599&origin=jsapi_2_1_48&from=api-maps&mode=routes">на карте</a>)</div>
-							<div class="contacts__sub-title">Skype: <a href="skype:efimenko_yulia">efimenko_yulia</a></div>
-							<div class="appointment">
-								<div class="appointment__txt">Запишитесь на консультацию<br />по телефону или онлайн</div>
-								<div class="appointment__phone"><a href="tel:+79637779077">+7 (963) 777-90-77</a></div>
-								<button>Записаться</button>
-							</div>
-						</div>
-						<div class="contacts-border"></div>
-					</div>
-			</div>
 
-		<!-- FOOTER -->
+		<!-- FOOTER + MAP -->
+		<div class="map-outer">
+			<div class="map" id="map"></div>
+				<div class="contacts-wrapp">
+					<div class="contacts">
+						<div class="contacts__title">Контакты</div>
+						<hr class="hr hr--half">
+						<div class="contacts__sub-title">Адреса кабинетов:</div>
+						<div>м. Третьяковская, м. Новокузнецкая</div>
+						<div>ул. Большая Ордынка, д. 17/8 (<a href="https://yandex.ru/maps/213/moscow/?z=18&ll=37.626867%2C55.741617&l=map&rtext=55.742496%2C37.629034~55.740774%2C37.625580~55.742231%2C37.626018&rtt=pd&pt=37.626018%2C55.742231~37.625693%2C55.741599&origin=jsapi_2_1_48&from=api-maps&mode=routes">на карте</a>)</div>
+						<div>ул. Большая Ордынка, д. 19/1 (<a href="https://yandex.ru/maps/213/moscow/?z=18&ll=37.627457%2C55.741484&l=map&rtext=55.742496%2C37.629034~55.740774%2C37.625580~55.741599%2C37.625693&rtt=pd&pt=37.626018%2C55.742231~37.625693%2C55.741599&origin=jsapi_2_1_48&from=api-maps&mode=routes">на карте</a>)</div>
+						<div class="contacts__sub-title">Skype: <a href="skype:efimenko_yulia">efimenko_yulia</a></div>
+						<div class="appointment">
+							<div class="appointment__txt">Запишитесь на консультацию<br />по телефону или онлайн</div>
+							<div class="appointment__phone"><a href="tel:+79637779077">+7 (963) 777-90-77</a></div>
+							<button>Записаться</button>
+						</div>
+					</div>
+					<div class="contacts-border"></div>
+				</div>
+		</div>
 		</div>
 		<footer class="footer">
 			<div class="container">

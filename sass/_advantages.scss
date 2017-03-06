@@ -1,9 +1,23 @@
 .advantages {
 	@include layout(table);
+	@include breakpoint(tablet){
+		@include layout(block);
+	}
 	&__item {
 		text-align: center;
 		width: 20%;
 		vertical-align: top;
+		@include breakpoint(middle) {
+			font-size: 0.8em;
+		}
+		@include breakpoint(tablet) {
+			width: auto;
+			font-size: 1em;
+			margin-bottom: 15px;
+		}
+		@include breakpoint(mobile) {
+			font-size: 1.1em;
+		}
 		img {
 			display: inline;
 		}

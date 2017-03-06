@@ -1,0 +1,69 @@
+.inner-top {
+	position: relative;
+	background: #c5cec9;
+	padding-top: 74px;
+	@include breakpoint(middle){
+		font-size: 0.8em;
+		padding-top: 70px;
+	}
+	@include breakpoint(tablet){
+		padding-top: 95px;
+	}
+	@include breakpoint(mobile) {
+		font-size: 0.7em;
+		padding-top: 65px;
+	}
+	&__item{
+		margin: 10px 0;
+		@include breakpoint(mobile) {
+			margin: 5px 0;
+		}
+		.txt {
+			@include font(20,50);
+			color: #444;
+			@include breakpoint(tablet){
+				line-height: 1.2;
+				display: none;
+			}
+		}
+		.phone {
+			@include font(30,50,700);
+			color: #fff;
+			@include breakpoint(tablet){
+				line-height: 1.2;
+			}
+		}
+		button {
+			float: right;
+			@include breakpoint(tablet) {
+				position: absolute;
+				top:1px;
+				right: 0;
+			}
+			@include breakpoint(mobile){
+				position: static;
+				float: none;
+			}
+		}
+	}
+}
+
+.article {
+	@include clearfix;
+	margin-bottom: 25px;
+	&__img {
+		float: left;
+		margin: 4px 10px 3px 0;
+		@include breakpoint(mobile) {
+			float: none;
+			margin-bottom: 15px;
+		}
+	}
+	&__txt {
+		i,p,h3,h2 {
+			&:first-child {
+				margin-top: 0px;
+			}
+		}
+	}
+}

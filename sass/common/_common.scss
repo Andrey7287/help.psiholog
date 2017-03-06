@@ -27,6 +27,9 @@ p {
 
 .block {
 	padding: 45px 0;
+	@include breakpoint(mobile) {
+		padding: 15px 0;
+	}
 }
 .wide-block {
 	max-width: 1366px;
@@ -57,13 +60,13 @@ textarea {
 
 a {
 	color: $link;
-	transition: 0.3s;
-
-	text-decoration: none;
+	transition: 0.2s;
+	text-decoration: underline;
 	display: inline-block;
 	&:hover,
 	&:focus {
 		color: $link-hov;
+		text-decoration: none;
 	}
 	&:focus {
 		outline: none;
@@ -82,7 +85,7 @@ img {
 
 //Buttons
 
-body button:not(.scrollup):not(.slider-arrow) {
+body button:not(.scrollup):not(.slider-arrow):not(.c-hamburger) {
 	background: #74a109;
 	background: linear-gradient(to bottom, #a7c90f 0%, #99bd0d 4%, #74a109 50%, #558a07 100%);
 	color: #fff;
@@ -99,22 +102,35 @@ body button:not(.scrollup):not(.slider-arrow) {
 
 // Headers
 
-h1, .h1 {
+body h1, .h1 {
 	@include font(50, 54, 700, $font: $pt-serif);
 	color: $header;
 	margin: 18px 0;
 	text-align: center;
+	@include breakpoint(mobile){
+		@include font(36, 38, 700, $font: $pt-serif);
+	}
 }
-h2, .h2 {
+body h2, .h2 {
 	@include font(30, 32, 700, $font: $pt-serif);
 	color: $header;
 	margin: 15px 0;
 }
-h3, .h3 {
-	@include font(20, 24, 700, $font: $pt-serif);
-	color: $header;
+body h3, .h3 {
+	@include font(20, 24, 700, $font: $open-sans);
+	color: $deep-blue;
 	margin: 10px 0;
 }
+body h4, .h4, body h5, .h5 {
+	color: $deep-blue;
+}
+
+.inner {
+	h1, .h1, h2, .h2, h3, .h3 {
+		text-align: left;
+	}
+}
+
 .sub-h {
 	@include font(15, 28);
 	color: $grey;
@@ -156,23 +172,6 @@ h3, .h3 {
 		&::before {
 			display: none!important;
 		}
-	}
-}
-
-.breadcrumbs {
-	color: #999;
-	margin-bottom: 30px;
-	@include breakpoint(mobile) {
-		margin-top: 25px;
-	}
-	&__item {
-		@include font(12, 15);
-		color: #999;
-		transition: 0.3s;
-	}
-	a {
-		@include link(#999);
-		border-color: #d6d6d6;
 	}
 }
 

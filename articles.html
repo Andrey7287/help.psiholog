@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>title</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic" rel="stylesheet" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<!--<link rel="stylesheet" href="main.css" />-->
 </head>
 
@@ -14,71 +16,134 @@
 	<div class="body">
 		<div class="content">
 			<header>
-				<div class="top">
-					<div class="container header">
-
-							<div class="header__item">
-								<img src="" alt="" class="logo">
-								<div class="head">
-									<span>Ефименко Юлия</span>
-									<span>Психологическая помощь</span>
+				<div class="container">
+					<div class="header">
+						<div class="header__item">
+							<button class="c-hamburger c-hamburger--htx">
+								<span>toggle menu</span>
+							</button>
+							<a href="/" class="logo-wrapp">
+								<div class="logo">
+									<div class="logo__item">
+										<img src="images/logo.png" alt="Логотип. Ефименко Юлия (психологическая помощь)" title="Логотип. Ефименко Юлия (психологическая помощь)">
+									</div>
+									<div class="logo__item">
+										<div>Ефименко Юлия</div>
+										<div>Психологическая помощь</div>
+									</div>
 								</div>
-							</div>
-							<div class="header__item">
-								<nav id="siteMenu">
+							</a>
+						</div>
+						<div class="header__item">
+							<nav id="siteMenu">
+								<ul class="site-nav mobile-close hide">
+									<li class="site-nav__item site-nav__item--act"><a href="/" class="site-nav__link"><span>Главная</span></a></li>
+									<li class="site-nav__item"><a href="#about" class="site-nav__link"><span>Обо&nbsp;мне</span></a></li>
+									<li class="site-nav__item"><a href="#consultation" class="site-nav__link"><span>Консультации</span></a></li>
+									<li class="site-nav__item"><a href="" class="site-nav__link"><span>Статьи</span></a></li>
+									<li class="site-nav__item"><a href="" class="site-nav__link"><span>Отзывы</span></a></li>
+									<li class="site-nav__item"><a href="" class="site-nav__link"><span>Контакты</span></a></li>
+								</ul>
 
-									<button class="c-hamburger c-hamburger--htx">
-										<span>toggle menu</span>
-									</button>
-									<ul class="site-nav mobile-close hide">
-										<li class="site-nav__item site-nav__item--act"><a href="/" class="site-nav__link"><span>Главная</span></a></li>
-										<li class="site-nav__item"><a href="#tech" class="site-nav__link"><span>Обо&nbsp;мне</span></a></li>
-										<li class="site-nav__item"><a href="#iss" class="site-nav__link"><span>Консультации</span></a></li>
-										<li class="site-nav__item"><a href="" class="site-nav__link"><span>Статьи</span></a></li>
-										<li class="site-nav__item"><a href="" class="site-nav__link"><span>Отзывы</span></a></li>
-										<li class="site-nav__item"><a href="" class="site-nav__link"><span>Контакты</span></a></li>
-									</ul>
-
-								</nav>
-							</div>
-
+							</nav>
+						</div>
 					</div>
 				</div>
-				<div class="bottom">
 
-				</div>
 			</header>
-
 			<!-- HEADER end-->
+			<div class="inner">
+				<div class="inner-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<div class="inner-top__item">
+									<div class="txt">Запишитесь на консультацию по телефону или онлайн</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="inner-top__item">
+									<div class="phone">+7 (963) 777-90-77</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="inner-top__item">
+									<button>Записаться</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<!-- For ALL inner pages -->
 
-			.
+					<!--  breadcrumbs -->
+					<div class="breadcrumbs">
+						<a class="breadcrumbs__item" href="#">Главная</a>
+						<a class="breadcrumbs__item" href="#">Консультации</a>
+						<a class="breadcrumbs__item" href="#">Индивидуальные консультации</a>
+						<span class="breadcrumbs__item">Страхи, фобии</span>
+					</div>
+
+					<h1>Страхи, фобии</h1>
 
 
+					<div class="article">
+						<div class="article__img">
+							<img src="images/article.jpg" alt="">
+						</div>
+						<div class="article__txt">
+							<i>«Ничто не сможет вас напугать, если вы не захотите пугаться.»<br />  Махатма  Ганди.</i>
+							<p>Многие из нас не понаслышке знают, что такое фобии. К сожалению, около 7% населения страдают данным недугом. Фобия — (от греч. «fobos» - страх) неконтролируемый, навязчивый страх, связанный с определенной ситуацией или объектом. Существует даже словарь фобий, в котором насчитывается более 300 форм навязчивых страхов.</p>
+							<h3>Как и по каким причинам формируются фобии? </h3>
+							<p>Страх — это защитная реакция организма, предупреждающая нас об опасности. Когда существует реальная опасность, то страх полезен. Фобия — это патологический, воображаемый страх. В момент, когда над человеком неожиданно нависла угроза, опасность — организм не понял, как реагировать на ситуацию и запаниковал, испугался. В следующий раз, в подобной ситуации, человек испытывает страх перед возникновением подобного симптома. Страх усиливает симптом, в свою очередь симптом увеличивает страх и т.д. до тех пор, пока у человека не наступит паника. Учащается сердцебиение, прошибает в пот, кружится голова, он возбужден и сильно напуган. Вам знакома такая ситуация? После этого вы уже никогда не войдете в лифт, не поедите на метро, не полетите на самолете… Есть люди, страхи которых редко встречаются в повседневной жизни, но бывают и случаи сложных фобий, из-за которых невозможно вести нормальный образ жизни (например, <a href="#">агорафобия</a> – боязнь открытого пространства).</p>
+							<p>Не слишком ли мы позволяем нашим страхам влиять на нашу жизнь? Не пора ли решать эту проблему? Решить ее можно просто — не ездить на метро, если страшно, а найти работу в шаговой доступности; не летать на самолетах, а предпочесть им поездку на поезде. Словом, избегать травмирующие нас ситуации. А можно и по-другому. Не пора ли посмотреть нашим страхам в глаза и решить, наконец, кто сильнее? Я или этот паучок с мохнатым брюшком?! С данным вопросом можно <a href="#">обратиться за помощью</a> к специалисту, ну разумеется, если у вас нет боязни  психологов))).</p>
+						</div>
+					</div>
 
-
-		<!-- FOOTER -->
+				<!-- For ALL inner pages -->
+				</div>
+			</div>
+			<!-- FOOTER + MAP -->
+			<div class="map-outer">
+				<div class="map" id="map"></div>
+				<div class="contacts-wrapp">
+					<div class="contacts">
+						<div class="contacts__title">Контакты</div>
+						<hr class="hr hr--half">
+						<div class="contacts__sub-title">Адреса кабинетов:</div>
+						<div>м. Третьяковская, м. Новокузнецкая</div>
+						<div>ул. Большая Ордынка, д. 17/8 (<a href="https://yandex.ru/maps/213/moscow/?z=18&ll=37.626867%2C55.741617&l=map&rtext=55.742496%2C37.629034~55.740774%2C37.625580~55.742231%2C37.626018&rtt=pd&pt=37.626018%2C55.742231~37.625693%2C55.741599&origin=jsapi_2_1_48&from=api-maps&mode=routes">на карте</a>)</div>
+						<div>ул. Большая Ордынка, д. 19/1 (<a href="https://yandex.ru/maps/213/moscow/?z=18&ll=37.627457%2C55.741484&l=map&rtext=55.742496%2C37.629034~55.740774%2C37.625580~55.741599%2C37.625693&rtt=pd&pt=37.626018%2C55.742231~37.625693%2C55.741599&origin=jsapi_2_1_48&from=api-maps&mode=routes">на карте</a>)</div>
+						<div class="contacts__sub-title">Skype: <a href="skype:efimenko_yulia">efimenko_yulia</a></div>
+						<div class="appointment">
+							<div class="appointment__txt">Запишитесь на консультацию
+								<br />по телефону или онлайн</div>
+							<div class="appointment__phone"><a href="tel:+79637779077">+7 (963) 777-90-77</a></div>
+							<button>Записаться</button>
+						</div>
+					</div>
+					<div class="contacts-border"></div>
+				</div>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 col-xs-12">
-						<div class="footer__item footer__item--left">
-							121205, Москва, Россия,<br />
-							территория инновационного центра Сколково,
-							ул. Нобеля, д. 7.<br />
-							+7 (495) 005-9382, <a href="mailto:info@etbcat.com">info@etbcat.com</a>
+					<div class="col-md-5 col-sm-9 col-xs-12">
+						<div class="copyright">© Психологическая помощь Ю.А.Ефименко. 2017</div>
+					</div>
+					<div class="col-md-2 col-sm-3 col-xs-12">
+						<div class="soc">
+							<div class="soc-inner">
+								<a href="#" class="soc__item soc__item--vk">vk</a>
+								<a href="#" class="soc__item soc__item--fb">facebook</a>
+								<a href="#" class="soc__item soc__item--ok">odnoklasniki</a>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 col-xs-12">
-						<div class="footer__item footer__item--right">
-							<div class="soc">
-								<a href="#" class="soc__item soc__item--fb">facebook</a>
-								<a href="#" class="soc__item soc__item--vk">vk</a>
-							</div>
-							© 2016 ООО «ЭТБ каталитические технологии»<br />
-							Все права защищены<br />
-							© Разработка сайта и дизайн «Инфодизайн» 2016
-						</div>
+					<div class="col-md-5 col-xs-12">
+						<a href="http://infodesign.ru/" class="infodisign">© Создание сайта и дизайн «Инфодизайн» 2017</a>
 					</div>
 				</div>
 			</div>

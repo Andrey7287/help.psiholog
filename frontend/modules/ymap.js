@@ -2,7 +2,8 @@ ymaps.ready(init);
 
 var map,
 		marker_1,
-		marker_2;
+		marker_2,
+		mobileView = window.matchMedia("(max-width: 992px)").matches;
 
 function init(){
 
@@ -23,7 +24,7 @@ function init(){
 					}
 			}, {
 					// Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
-					//boundsAutoApply: true,
+					boundsAutoApply: mobileView ? true : false,
 					routeActiveStrokeColor: '568b07'
 			});
 
